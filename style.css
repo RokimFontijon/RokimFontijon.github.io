@@ -188,3 +188,5 @@ footer { text-align: center; padding: 50px 0 40px; color: var(--muted); font-siz
   * { animation: none !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+.project.soon { border-style: dashed; }

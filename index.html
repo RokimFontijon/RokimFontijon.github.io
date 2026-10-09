@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rokim Fontijon — Portfolio</title>
+  <meta name="description" content="Portfolio of Rokim Fontijon, IT student and aspiring software developer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&family=Fraunces:ital,wght@0,600;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <div class="cursor" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a href="#home" class="logo">&lt;rf/&gt;</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#timeline">Journey</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="theme" aria-label="Toggle theme">◐</button>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <p class="eyebrow mono">// hello, world</p>
+      <h1>I'm <span class="grad">Rokim Fontijon</span>,<br />I build things for the <em>web</em>.</h1>
+      <p class="lead">IT student &amp; aspiring software developer. I turn ideas into clean, working projects, from first-year basics to full applications.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">View projects</a>
+        <a class="btn" href="resume.pdf" download>Download resume</a>
+        <a class="btn ghost" href="https://github.com/RokmFontijon" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+      <div class="terminal" aria-label="Typing terminal">
+        <div class="dots"><i></i><i></i><i></i></div>
+        <p class="mono"><span class="prompt">$</span> <span id="typed"></span><span class="caret">▍</span></p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="reveal">
+      <h2><span class="num mono">01</span> About me</h2>
+      <div class="about-grid">
+        <div class="card">
+          <p>Hi! I'm a <strong>3rd year BSIT</strong> student at <strong>Polytechnic University of the Philippines (PUP)</strong>. I enjoy solving problems with code and learning something new with every project.</p>
+          <p>I'm looking for internship and junior developer opportunities where I can keep learning and build real projects.</p>
+        </div>
+        <div class="stats">
+          <div class="stat"><b data-count="2">0</b><span>Projects</span></div>
+          <div class="stat"><b data-count="3">0</b><span>Years of IT study</span></div>
+          <div class="stat"><b data-count="5">0</b><span>Languages</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="reveal">
+      <h2><span class="num mono">02</span> Skills</h2>
+      <div class="skills">
+        <div class="skill-group card">
+          <h3>Languages</h3>
+          <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>SQL</li></ul>
+        </div>
+        <div class="skill-group card">
+          <h3>Tools</h3>
+          <ul class="chips"><li>Git</li><li>GitHub</li><li>VS Code</li><li>MySQL</li></ul>
+        </div>
+        <div class="skill-group card">
+          <h3>Strengths</h3>
+          <ul class="chips"><li>Problem solving</li><li>Teamwork</li><li>Documentation</li><li>Fast learner</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="reveal">
+      <h2><span class="num mono">03</span> Projects</h2>
+      <div class="filters" role="tablist">
+        <button class="filter active" data-f="all">All</button>
+        <button class="filter" data-f="web">Web</button>
+        <button class="filter" data-f="app">Apps</button>
+      </div>
+
+      <div class="grid" id="grid">
+        <!-- Duplicate/edit these cards for each project, from first year to now -->
+        <article class="project tilt" data-cat="web">
+          <span class="tag mono">Web · 2026</span>
+          <h3>Personal Portfolio</h3>
+          <p>Static portfolio built with HTML, CSS and JavaScript, hosted on GitHub Pages.</p>
+          <ul class="chips small"><li>HTML</li><li>CSS</li><li>JS</li></ul>
+          <div class="links"><a href="https://github.com/RokmFontijon/RokmFontijon.github.io" target="_blank" rel="noopener">Code ↗</a><a href="https://RokmFontijon.github.io" target="_blank" rel="noopener">Live ↗</a></div>
+        </article>
+
+        <article class="project tilt" data-cat="app">
+          <span class="tag mono">App · 3rd Year</span>
+          <h3>Motorcycle Repair Shop System</h3>
+          <p>System that manages customers, repair jobs and payments for a motorcycle repair shop.</p>
+          <ul class="chips small"><li>PHP</li><li>MySQL</li></ul>
+          <div class="links"><a href="https://github.com/RokmFontijon/motorcycle-repair-shop-system" target="_blank" rel="noopener">Code ↗</a></div>
+        </article>
+
+
+
+
+
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section id="timeline" class="reveal">
+      <h2><span class="num mono">04</span> Journey</h2>
+      <ol class="timeline">
+        <li><time class="mono">1st Year</time><div><h3>Learned the fundamentals</h3><p>Programming basics, logic building, first console programs.</p></div></li>
+        <li><time class="mono">2nd Year</time><div><h3>Started building for the web</h3><p>HTML, CSS, JavaScript and first group projects.</p></div></li>
+        <li><time class="mono">3rd Year</time><div><h3>Databases &amp; full apps</h3><p>SQL, system design, applications with real data.</p></div></li>
+        <li><time class="mono">Now</time><div><h3>Building my portfolio</h3><p>Publishing projects on GitHub and preparing for work.</p></div></li>
+      </ol>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="reveal">
+      <h2><span class="num mono">05</span> Let's connect</h2>
+      <div class="card contact">
+        <p>Open for internships and junior opportunities. Say hi!</p>
+        <div class="contact-links">
+          <a href="mailto:rokimlungan60@gmail.com">rokimlungan60@gmail.com</a>
+          <a href="https://github.com/RokmFontijon" target="_blank" rel="noopener">github.com/RokmFontijon</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="mono">© <span id="year"></span> Rokim Fontijon · Built with HTML, CSS &amp; JS</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

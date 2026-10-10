@@ -3,139 +3,161 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rokim Fontijon — Portfolio</title>
-  <meta name="description" content="Portfolio of Rokim Fontijon, IT student and aspiring software developer." />
+  <title>Rokim Fontijon - BSIT Student Portfolio</title>
+  <meta name="description" content="Portfolio of Rokim Fontijon, a 3rd year BSIT student at the Polytechnic University of the Philippines." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%237a0c1b'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='900' font-size='32' text-anchor='middle' fill='%23f5b800'%3ERF%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&family=Fraunces:ital,wght@0,600;1,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <canvas id="bg" aria-hidden="true"></canvas>
-  <div class="cursor" aria-hidden="true"></div>
+  <a class="skip" href="#main">Skip to content</a>
 
-  <header class="nav">
-    <a href="#home" class="logo">&lt;rf/&gt;</a>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#timeline">Journey</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <button id="theme" aria-label="Toggle theme">◐</button>
+  <header class="top">
+    <div class="wrap top-row">
+      <a class="wordmark" href="#home">Rokim Fontijon</a>
+      <nav aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#journey">Journey</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="theme" type="button" aria-pressed="false">Dark mode</button>
+    </div>
   </header>
 
-  <main>
+  <main id="main">
     <!-- HERO -->
-    <section id="home" class="hero">
-      <p class="eyebrow mono">// hello, world</p>
-      <h1>I'm <span class="grad">Rokim Fontijon</span>,<br />I build things for the <em>web</em>.</h1>
-      <p class="lead">IT student &amp; aspiring software developer. I turn ideas into clean, working projects, from first-year basics to full applications.</p>
-      <div class="cta">
-        <a class="btn primary" href="#projects">View projects</a>
-        <a class="btn" href="resume.pdf" download>Download resume</a>
-        <a class="btn ghost" href="https://github.com/RokimFontijon" target="_blank" rel="noopener">GitHub ↗</a>
+    <section id="home" class="wrap hero">
+      <div class="hero-text">
+        <h1>Rokim<br />Fontijon</h1>
+        <p class="lead">I'm a 3rd year BSIT student at the Polytechnic University of the Philippines. I build websites with HTML, CSS and JavaScript, and I'm learning PHP and MySQL to build complete systems.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#projects">View projects</a>
+          <a class="btn" href="resume.pdf" download>Download resume</a>
+          <a class="btn" href="https://github.com/RokimFontijon" target="_blank" rel="noopener">Open GitHub</a>
+        </div>
       </div>
-      <div class="terminal" aria-label="Typing terminal">
-        <div class="dots"><i></i><i></i><i></i></div>
-        <p class="mono"><span class="prompt">$</span> <span id="typed"></span><span class="caret">▍</span></p>
+
+      <div class="hero-card" aria-hidden="true">
+        <div class="lanyard">
+          <div class="card-tilt">
+            <div class="strap"><span class="clip"></span></div>
+            <div class="idcard">
+              <div class="id-band">
+                <span>Polytechnic University<br />of the Philippines</span>
+              </div>
+              <div class="id-body">
+                <div class="id-initials">RF</div>
+                <p class="id-name">Rokim Fontijon</p>
+                <dl class="id-facts">
+                  <div><dt>Course</dt><dd>BS Information Technology</dd></div>
+                  <div><dt>Year</dt><dd>3rd year</dd></div>
+                  <div><dt>Home</dt><dd>Calauan, Laguna</dd></div>
+                </dl>
+              </div>
+              <div class="id-foot">
+                <div class="barcode"></div>
+                <p>rokimfontijon.github.io</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="reveal">
-      <h2><span class="num mono">01</span> About me</h2>
-      <div class="about-grid">
-        <div class="card">
-          <p>Hi! I'm a <strong>3rd year BSIT</strong> student at <strong>Polytechnic University of the Philippines (PUP)</strong>. I enjoy solving problems with code and learning something new with every project.</p>
-          <p>I'm looking for internship and junior developer opportunities where I can keep learning and build real projects.</p>
-        </div>
-        <div class="stats">
-          <div class="stat"><b data-count="1">0</b><span>Projects</span></div>
-          <div class="stat"><b data-count="3">0</b><span>Years of IT study</span></div>
-          <div class="stat"><b data-count="5">0</b><span>Languages</span></div>
-        </div>
+    <section id="about" class="wrap section split">
+      <h2>About me</h2>
+      <div>
+        <p class="big">I like turning a plain idea into something that works in the browser, then making it clean enough that someone else can use it.</p>
+        <p>I'm looking for an internship or junior developer role where I can keep learning and ship real projects. I document my work on GitHub so you can see how it's built.</p>
+        <dl class="facts">
+          <div><dt>School</dt><dd>Polytechnic University of the Philippines</dd></div>
+          <div><dt>Course</dt><dd>Bachelor of Science in Information Technology</dd></div>
+          <div><dt>Year level</dt><dd>3rd year</dd></div>
+          <div><dt>Based in</dt><dd>Calauan, Laguna</dd></div>
+          <div><dt>Looking for</dt><dd>Internship or junior developer role</dd></div>
+        </dl>
       </div>
     </section>
 
     <!-- SKILLS -->
-    <section id="skills" class="reveal">
-      <h2><span class="num mono">02</span> Skills</h2>
-      <div class="skills">
-        <div class="skill-group card">
-          <h3>Languages</h3>
-          <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>SQL</li></ul>
+    <section id="skills" class="wrap section split">
+      <h2>Skills</h2>
+      <div class="skill-grid">
+        <div>
+          <h3>Web</h3>
+          <ul class="marks"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
         </div>
-        <div class="skill-group card">
+        <div>
+          <h3>Back end and data</h3>
+          <ul class="marks"><li>PHP</li><li>SQL</li><li>MySQL</li></ul>
+        </div>
+        <div>
           <h3>Tools</h3>
-          <ul class="chips"><li>Git</li><li>GitHub</li><li>VS Code</li><li>MySQL</li></ul>
+          <ul class="marks"><li>Git</li><li>GitHub</li><li>VS Code</li></ul>
         </div>
-        <div class="skill-group card">
-          <h3>Strengths</h3>
-          <ul class="chips"><li>Problem solving</li><li>Teamwork</li><li>Documentation</li><li>Fast learner</li></ul>
+        <div>
+          <h3>How I work</h3>
+          <ul class="marks"><li>Problem solving</li><li>Teamwork</li><li>Documentation</li></ul>
         </div>
       </div>
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="reveal">
-      <h2><span class="num mono">03</span> Projects</h2>
-      <div class="filters" role="tablist">
-        <button class="filter active" data-f="all">All</button>
-        <button class="filter" data-f="web">Web</button>
-      </div>
-
-      <div class="grid" id="grid">
-        <!-- Duplicate/edit these cards for each project, from first year to now -->
-        <article class="project tilt" data-cat="web">
-          <span class="tag mono">Web · 2026</span>
+    <section id="projects" class="wrap section split">
+      <h2>Projects</h2>
+      <div class="pages">
+        <article class="page">
           <h3>Personal Portfolio</h3>
-          <p>Static portfolio built with HTML, CSS and JavaScript, hosted on GitHub Pages.</p>
-          <ul class="chips small"><li>HTML</li><li>CSS</li><li>JS</li></ul>
-          <div class="links"><a href="https://github.com/RokimFontijon/RokimFontijon.github.io" target="_blank" rel="noopener">Code ↗</a><a href="https://RokimFontijon.github.io" target="_blank" rel="noopener">Live ↗</a></div>
+          <p>A responsive static website with a hanging ID card, a dark mode and a downloadable resume. Hosted free on GitHub Pages.</p>
+          <p class="built">Built with HTML, CSS and JavaScript</p>
+          <p class="page-links">
+            <a href="https://github.com/RokimFontijon/RokimFontijon.github.io" target="_blank" rel="noopener">Source code</a>
+            <a href="https://RokimFontijon.github.io" target="_blank" rel="noopener">Live site</a>
+          </p>
         </article>
 
-        <article class="project tilt soon" data-cat="web">
-          <span class="tag mono">Coming soon</span>
-          <h3>More projects on the way</h3>
-          <p>I'm building and uploading more projects to GitHub. Check back soon.</p>
-          <div class="links"><a href="https://github.com/RokimFontijon" target="_blank" rel="noopener">Follow on GitHub ↗</a></div>
+        <article class="page page-empty">
+          <h3>Next project</h3>
+          <p>I'm uploading my school work to GitHub as I finish it. New projects will show up here.</p>
+          <p class="page-links">
+            <a href="https://github.com/RokimFontijon" target="_blank" rel="noopener">Follow on GitHub</a>
+          </p>
         </article>
-
-
-
-
-
       </div>
     </section>
 
-    <!-- TIMELINE -->
-    <section id="timeline" class="reveal">
-      <h2><span class="num mono">04</span> Journey</h2>
-      <ol class="timeline">
-        <li><time class="mono">1st Year</time><div><h3>Learned the fundamentals</h3><p>Programming basics, logic building, first console programs.</p></div></li>
-        <li><time class="mono">2nd Year</time><div><h3>Started building for the web</h3><p>HTML, CSS, JavaScript and first group projects.</p></div></li>
-        <li><time class="mono">3rd Year</time><div><h3>Databases &amp; full apps</h3><p>SQL, system design, applications with real data.</p></div></li>
-        <li><time class="mono">Now</time><div><h3>Building my portfolio</h3><p>Publishing projects on GitHub and preparing for work.</p></div></li>
+    <!-- JOURNEY -->
+    <section id="journey" class="wrap section split">
+      <h2>Journey</h2>
+      <ol class="schedule">
+        <li><span class="when">1st year</span><div><h3>Programming basics</h3><p>Logic building and my first console programs.</p></div></li>
+        <li><span class="when">2nd year</span><div><h3>Websites</h3><p>HTML, CSS and JavaScript, plus group projects.</p></div></li>
+        <li><span class="when">3rd year</span><div><h3>Databases and systems</h3><p>SQL and PHP, and applications that store real data.</p></div></li>
+        <li><span class="when now">Now</span><div><h3>This portfolio</h3><p>Publishing my projects on GitHub and preparing for work.</p></div></li>
       </ol>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="reveal">
-      <h2><span class="num mono">05</span> Let's connect</h2>
-      <div class="card contact">
-        <p>Open for internships and junior opportunities. Say hi!</p>
-        <div class="contact-links">
-          <a href="mailto:rokimlungan60@gmail.com">rokimlungan60@gmail.com</a>
-          <a href="https://github.com/RokimFontijon" target="_blank" rel="noopener">github.com/RokimFontijon</a>
-        </div>
+    <section id="contact" class="wrap section split">
+      <h2>Contact</h2>
+      <div>
+        <p class="big">Have an internship or a small project in mind? Email me.</p>
+        <p><a class="mail" href="mailto:rokimlungan60@gmail.com">rokimlungan60@gmail.com</a></p>
+        <p class="more-links">
+          <a href="https://github.com/RokimFontijon" target="_blank" rel="noopener">GitHub profile</a>
+          <a href="resume.pdf" download>Resume (PDF)</a>
+        </p>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p class="mono">© <span id="year"></span> Rokim Fontijon · Built with HTML, CSS &amp; JS</p>
+  <footer class="wrap foot">
+    <p>&copy; <span id="year">2026</span> Rokim Fontijon. Built with HTML, CSS and JavaScript.</p>
   </footer>
 
   <script src="script.js"></script>
